@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javaScript</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            height: 100%;
+            width: 100%;
+            background: rgb(96, 210, 214);
+            padding: 30px;
+            margin: 30px;
+        }
+        
+        container::before {
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            background: url('../bg1.jpg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: cover;
+            height: 642px;
+            width: 100%;
+            opacity: 0.89;
+            z-index: -1;
+        }
+        
+        #btn {
+            border: black;
+            border-radius: 4px;
+            background: black;
+            color: white;
+            margin: 10px 20px;
+            padding: 10px 20px;
+        }
+        
+        #btn:hover {
+            display: block;
+            background: rgb(255, 81, 0);
+            color: black;
+        }
+        
+        header {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            background: rgb(249, 252, 93);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        #para {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Sachin Gavali </header>
+        <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt sequi voluptatibus voluptatem suscipit nobis nemo, exercitationem laudantium voluptas maxime mollitia nam possimus eum impedit fuga placeat quisquam fugit magni illum ipsam nostrum?
+            Delenititia nam possimus eum impedit fuga placeat quisquam fugit magni illum ipsam nostrum? Deleniti natus eius nesciunt officia ipsa corporis accusantium minima impedit, aliquam, assumenda, expedita perferendis esse culpa distinctio architecto</p>
+        <button id="btn" onclick="toggleHide()">Show/ Hide </button>
+    </div>
+    <script>
+        function toggleHide() {
+            let btn = document.getElementById(`btn`);
+            let para = document.getElementById(`para`);
+            if (para.style.display != `none`) {
+                para.style.display = `none`;
+
+            } else {
+                para.style.display = `block`;
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
